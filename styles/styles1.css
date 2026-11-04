@@ -28,10 +28,10 @@ main {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
+    border: 1px solid rgb(0 80 40 / 0.4);
     padding: 1rem;
-    background-color: #bbb;
-    color: #222;
+    background-color: #e8f5e9;
+    color: #111111;
     text-align: center;
 }
 
