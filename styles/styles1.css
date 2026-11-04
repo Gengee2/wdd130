@@ -23,7 +23,6 @@ img {
 
 main {
     max-width: 840px;
-    /* limits main's width for now */
 }
 
 aside {
@@ -31,8 +30,8 @@ aside {
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    background-color: #bbb;
+    color: #222;
     text-align: center;
 }
 
