@@ -91,9 +91,9 @@ h1 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 1.4;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: #f7f4f4;
 }
 
 .hero article {
