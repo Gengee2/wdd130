@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #09bd09;
-    /* forest green */
-    --secondary-color: #070702;
+    --primary-color: #264653;
+    /* dark slate blue */
+    --secondary-color: #f4a261;
     /* warm sand */
     --accent1-color: #264653;
     /* dark slate blue */
-    --accent2-color: #100d04;
-    /* light golden yellow */
+    --accent2-color: #fcfaf5;
+    /* cream */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -20,6 +20,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: #ffffff;
 }
 
 header,
@@ -56,6 +57,7 @@ header img {
     width: 120px;
     height: auto;
     margin: 8px 16px;
+    border-radius: 6px;
 }
 
 header nav ul {
@@ -91,9 +93,9 @@ h1 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 1.4;
-    background-color: var(--accent1-color);
-    color: #f7f4f4;
+    opacity: 1;
+    background-color: rgba(38, 70, 83, 0.85);
+    color: #ffffff;
 }
 
 .hero article {
@@ -102,7 +104,8 @@ h1 {
     left: 20px;
     width: 60%;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: #ffffff;
+    color: var(--accent1-color);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -119,7 +122,12 @@ h1 {
 footer {
     text-align: center;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: #ffffff;
+    padding: 8px 0 16px;
+}
+
+footer p {
+    color: #ffffff;
 }
 
 .socialmedia a {
@@ -130,4 +138,7 @@ footer {
     width: 32px;
     height: 32px;
     margin: 0 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px;
 }
