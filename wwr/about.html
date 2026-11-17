@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <img src="images/logo.jpg" alt="Riverbend Rafters logo">
-        <nav>
+        <img src="images/logo.jpg" alt="Riverbend Rafters logo" class="logo">
+        <nav aria-label="Main">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="current">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -25,7 +25,7 @@
 
     <main>
         <div class="hero">
-            <img src="images/raft2.jpg" alt="Yellow kayak paddle splashing through river rapids">
+            <img src="images/raft2.jpg" alt="Yellow kayak paddle splashing through river rapids" class="hero-img">
             <h1>Riverbend Rafters</h1>
             <article>
                 <img src="images/miniraft.jpg" alt="Smiling guests in red helmets and life jackets on a raft">
@@ -33,19 +33,43 @@
             </article>
         </div>
 
-        <section>
+        <section class="history">
             <h2>History</h2>
-            <p>Riverbend Rafters Rafting Company was founded in 2005 by two lifelong friends who grew up exploring local rivers and dreamed of sharing that passion with others. What started with a single raft and a handful of weekend trips has grown into a trusted team of certified guides offering excursions for every skill level. Over the years, we’ve welcomed thousands of guests and built a reputation for friendly service, top safety standards, and unforgettable days on the water. Today, we continue to grow while staying true to our roots: a love of adventure and a deep respect for the thunderous rivers we call home.</p>
+            <p>Riverbend Rafters Rafting Company was founded in 2005 by two lifelong friends who grew up exploring local rivers and dreamed of sharing that passion with others. What started with a single raft and a handful of weekend trips has grown into a trusted team of certified guides offering excursions for every skill level.</p>
+            <img loading="lazy" src="images/rafter23.jpeg" alt="Early Riverbend Rafters guides carrying a raft to the river">
+            <p>Over the years, we’ve welcomed thousands of guests and built a reputation for friendly service, top safety standards, and unforgettable days on the water. Today, we continue to grow while staying true to our roots: a love of adventure and a deep respect for the thunderous rivers we call home.</p>
         </section>
 
-        <section>
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
+            <div class="gallery">
+                <figure>
+                    <img loading="lazy" src="images/raft2.jpg" alt="Raft paddling through whitewater at Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/rafter1.jpeg" alt="Raft crashing through the Big Mallard rapid">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/rafting8.jpeg" alt="Family floating a calm stretch of river">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/guest1.jpeg" alt="Guests paddling together on a full day trip">
+                    <figcaption>Full Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/sunset1.jpeg" alt="Rafters at sunset on a calm river">
+                    <figcaption>Sunset Float</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Riverbend Rafters | Angela Vordzogbe</p>
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="Social media">
             <a href="https://www.facebook.com"><img src="images/facebook.svg" alt="Facebook page"></a>
             <a href="https://www.instagram.com"><img src="images/instagram.svg" alt="Instagram page"></a>
             <a href="https://www.x.com"><img src="images/x-bw.svg" alt="X (Twitter) page"></a>
