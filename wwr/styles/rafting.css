@@ -92,36 +92,37 @@ header nav a.current {
     background-color: var(--secondary-color);
 }
 
-/* Hero: picture, title and intro box share one grid cell */
+/* Hero: picture with title and intro box overlaid (position rules required by the audit) */
 .hero {
-    display: grid;
+    position: relative;
     margin: 16px 0;
 }
 
 .hero img {
-    grid-area: 1 / 1;
     display: block;
     width: 100%;
-    height: 280px;
+    height: 300px;
     object-fit: cover;
 }
 
 .hero h1 {
-    grid-area: 1 / 1;
-    align-self: start;
+    position: absolute;
+    top: 0;
+    width: 100%;
     padding: 10px;
     text-align: center;
     background-color: rgba(38, 70, 83, 0.85);
     color: #ffffff;
 }
 
-/* Intro box: centered across and in the space under the title */
+/* Intro box centered across and in the space under the title */
 .hero article {
-    grid-area: 1 / 1;
-    align-self: center;
-    justify-self: center;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 92%;
-    margin: 50px 0 0 0;
+    margin: 0;
     background-color: #ffffff;
     color: var(--accent1-color);
     border-radius: 8px;
@@ -129,7 +130,6 @@ header nav a.current {
 }
 
 .hero article img {
-    grid-area: auto;
     float: right;
     width: 125px;
     height: auto;
@@ -264,10 +264,9 @@ footer p {
 
     /* Intro box drops under the picture on phones */
     .hero article {
-        grid-area: 2 / 1;
-        justify-self: stretch;
+        position: static;
+        transform: none;
         width: 100%;
-        margin: 0;
         border-radius: 0;
     }
 }
