@@ -27,7 +27,6 @@ header,
 main,
 footer {
     max-width: 840px;
-    /* was width: 840px; max-width lets it shrink on small screens */
     margin: 0 auto;
 }
 
@@ -168,19 +167,26 @@ header nav a.current {
     border-radius: 6px;
 }
 
-/* Adventures: five figures across */
-.adventures {
+/* Adventures (About page) and Team (Contact page): shared boxed section */
+.adventures,
+.team {
     margin: 24px 16px;
     padding: 32px 16px;
     background-color: var(--accent2-color);
     border: 1px solid var(--primary-color);
 }
 
-.adventures h2 {
+.adventures h2,
+.team h2 {
     text-align: center;
     margin-bottom: 16px;
 }
 
+.team h2 {
+    font-size: 2.2rem;
+}
+
+/* Gallery: five figures across */
 .gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -200,6 +206,137 @@ header nav a.current {
     font-size: 0.85rem;
     font-weight: bold;
     color: var(--primary-color);
+}
+
+/* ===== Contact page ===== */
+
+/* Company info: centered at the top */
+.contact-info {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact-info h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.contact-info address {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+}
+
+/* Map on the left, form on the right */
+.contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contact-main .map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: 0;
+}
+
+/* Form */
+.contact-form {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+/* Label on the left, input on the right */
+.contact-form .field {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Message label sits above the textarea */
+.contact-form .field.stacked {
+    grid-template-columns: 1fr;
+}
+
+.contact-form label,
+.contact-form .group-label {
+    font-weight: normal;
+}
+
+/* Radio buttons stacked */
+.contact-form .options {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form .options label,
+.contact-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    font: inherit;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Submit button: full width, clearly visible */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Employee profiles: three across, centered, square photos */
+.team .gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.team figure {
+    text-align: center;
+}
+
+.team .gallery img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
 }
 
 /* Footer: text left, social icons right */
@@ -247,6 +384,22 @@ footer p {
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-main .map {
+        min-height: 250px;
+    }
+
+    .contact-form .field {
+        grid-template-columns: 1fr;
+    }
+
+    .team .gallery {
+        grid-template-columns: 1fr;
     }
 
     footer {
