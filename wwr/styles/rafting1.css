@@ -1,0 +1,422 @@
+:root {
+    --primary-color: #264653;
+    /* dark slate blue */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #fcfaf5;
+    /* cream */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #ffffff;
+}
+
+header,
+main,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Header: Grid for logo + nav, Flex for the nav links */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+    margin: 8px 16px;
+    border-radius: 6px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav li {
+    flex: 1 1 auto;
+}
+
+header nav a {
+    display: block;
+    padding: 8px 14px;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover,
+header nav a:focus,
+header nav a.current {
+    background-color: var(--secondary-color);
+}
+
+/* Hero: picture with title and intro box overlaid (position rules required by the audit) */
+.hero {
+    position: relative;
+    margin: 16px 0;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.85);
+    color: #ffffff;
+}
+
+/* Intro box centered across and in the space under the title */
+.hero article {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--accent1-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin: 0 0 8px 12px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 6px;
+}
+
+/* History: text | image | text, heading centered on top */
+.history {
+    margin: 24px 16px;
+    padding: 32px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    align-items: center;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.history p {
+    margin: 0;
+    padding: 0;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--secondary-color);
+    border-radius: 6px;
+}
+
+/* Adventures (About page) and Team (Contact page): shared boxed section */
+.adventures,
+.team {
+    margin: 24px 16px;
+    padding: 32px 16px;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+}
+
+.adventures h2,
+.team h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Gallery: five figures across */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gallery figcaption {
+    margin-top: 4px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* ===== Contact page ===== */
+
+/* Company info: centered at the top */
+.contact-info {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact-info h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.contact-info address {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+}
+
+/* Map on the left, form on the right */
+.contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contact-main .map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: 0;
+}
+
+/* Form */
+.contact-form {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+/* Label on the left, input on the right */
+.contact-form .field {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Message label sits above the textarea */
+.contact-form .field.stacked {
+    grid-template-columns: 1fr;
+}
+
+.contact-form label,
+.contact-form .group-label {
+    font-weight: normal;
+}
+
+/* Radio buttons stacked */
+.contact-form .options {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form .options label,
+.contact-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    font: inherit;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Submit button: full width, clearly visible */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Employee profiles: three across, centered, square photos */
+.team .gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.team figure {
+    text-align: center;
+}
+
+.team .gallery img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+}
+
+/* Footer: text left, social icons right */
+footer {
+    width: calc(100% - 32px);
+    max-width: 808px;
+    margin: 0 auto 24px;
+    padding: 24px 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .history {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-main .map {
+        min-height: 250px;
+    }
+
+    .contact-form .field {
+        grid-template-columns: 1fr;
+    }
+
+    .team .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    /* Intro box drops under the picture on phones */
+    .hero article {
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    }
+}

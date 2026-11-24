@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Riverbend Rafters</title>
+    <meta name="description" content="Contact Riverbend Rafters with questions about our rafting trips, reservations, or website. Find our address, phone number, email, and send us a message.">
+    <meta name="author" content="Angela Vordzogbe">
+    <link rel="stylesheet" href="styles/rafting1.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Riverbend Rafters logo" class="logo">
+        <nav aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="current">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h1>Riverbend Rafters</h1>
+            <address>
+                123 Main River Street<br>
+                Sacramento, California, CA<br>
+                <a href="tel:+19999999999">+1 999 999 9999</a><br>
+                <a href="mailto:info@riverbendrafters.com">info@riverbendrafters.com</a>
+            </address>
+        </section>
+
+        <section class="contact-main">
+            <iframe class="map" title="Map showing the Riverbend Rafters location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183022.3775358032!2d-125.55118491249999!3d38.822834400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b056bc65e2377%3A0xf92c07d60aa23526!2sSierra%20Whitewater%20-%20American%20River%20Rafting%20near%20Sacramento!5e0!3m2!1sen!2sgh!4v1795518695244!5m2!1sen!2sgh" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <form action="#" method="get" class="contact-form">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Placeholder" required>
+                </div>
+
+                <div class="field" role="group" aria-labelledby="purpose-label">
+                    <span id="purpose-label" class="group-label">Message Purpose</span>
+                    <div class="options">
+                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="field stacked">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type here" required></textarea>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </section>
+
+        <section class="team">
+            <h2>We Are Here to Serve You</h2>
+            <div class="gallery">
+                <figure>
+                    <img loading="lazy" src="images/head river guide.jpeg" alt="Portrait of our head river guide">
+                    <figcaption>Head River Guide</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/reservation coordinator.webp" alt="Portrait of our reservations manager">
+                    <figcaption>Reservations Manager</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="images/safety.webp" alt="Portrait of our safety coordinator">
+                    <figcaption>Safety Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Riverbend Rafters | Angela Vordzogbe</p>
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://www.facebook.com"><img src="images/facebook.svg" alt="Facebook page"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.svg" alt="Instagram page"></a>
+            <a href="https://www.x.com"><img src="images/x-bw.svg" alt="X (Twitter) page"></a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
