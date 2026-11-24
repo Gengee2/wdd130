@@ -28,7 +28,7 @@
             <h1>Riverbend Rafters</h1>
             <address>
                 123 Main River Street<br>
-                Sacramento, California, CA<br>
+                Sacramento, California<br>
                 <a href="tel:+19999999999">+1 999 999 9999</a><br>
                 <a href="mailto:info@riverbendrafters.com">info@riverbendrafters.com</a>
             </address>
@@ -51,9 +51,15 @@
                 <div class="field" role="group" aria-labelledby="purpose-label">
                     <span id="purpose-label" class="group-label">Message Purpose</span>
                     <div class="options">
-                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+                        <label for="general">
+                            <input type="radio" id="general" name="purpose" value="general" checked> General Inquiry
+                        </label>
+                        <label for="reservation">
+                            <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question
+                        </label>
+                        <label for="suggestion">
+                            <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
+                        </label>
                     </div>
                 </div>
 
@@ -62,7 +68,7 @@
                     <textarea id="message" name="message" rows="5" placeholder="Type here" required></textarea>
                 </div>
 
-                <label class="checkbox">
+                <label class="checkbox" for="newsletter">
                     <input type="checkbox" id="newsletter" name="newsletter" value="yes">
                     Please subscribe me to the monthly newsletter
                 </label>
@@ -75,11 +81,11 @@
             <h2>We Are Here to Serve You</h2>
             <div class="gallery">
                 <figure>
-                    <img loading="lazy" src="images/head river guide.jpeg" alt="Portrait of our head river guide">
+                    <img loading="lazy" src="images/head-river-guide.jpeg" alt="Portrait of our head river guide">
                     <figcaption>Head River Guide</figcaption>
                 </figure>
                 <figure>
-                    <img loading="lazy" src="images/reservation coordinator.webp" alt="Portrait of our reservations manager">
+                    <img loading="lazy" src="images/reservation-coordinator.webp" alt="Portrait of our reservations manager">
                     <figcaption>Reservations Manager</figcaption>
                 </figure>
                 <figure>
