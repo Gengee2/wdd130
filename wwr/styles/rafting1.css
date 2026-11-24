@@ -182,6 +182,10 @@ header nav a.current {
     margin-bottom: 16px;
 }
 
+.team h2 {
+    font-size: 2.2rem;
+}
+
 /* Gallery: five figures across */
 .gallery {
     display: grid;
@@ -214,7 +218,7 @@ header nav a.current {
 
 .contact-info h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 8px;
 }
 
